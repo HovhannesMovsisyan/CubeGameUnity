@@ -10,7 +10,7 @@ public class GameController : MonoBehaviour
     public Transform cubeToPlace;
     public GameObject cubeToCreate, allCubes;
     private Rigidbody allCubesRb;
-    private Transform ad;
+
     private readonly List<Vector3> allCubsPositions = new List<Vector3> 
     { 
         new Vector3(0, 0, 0),
