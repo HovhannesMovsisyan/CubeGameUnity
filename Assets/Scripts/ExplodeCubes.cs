@@ -13,11 +13,11 @@ public class ExplodeCubes : MonoBehaviour
             {
                 Transform child = collision.transform.GetChild(i);
                 child.gameObject.AddComponent<Rigidbody>();
-                child.gameObject.GetComponent<Rigidbody>().AddExplosionForce(70f, Vector3.up, 5f);
+                child.gameObject.GetComponent<Rigidbody>().AddExplosionForce(150f, Vector3.up, 5f);
                 child.SetParent(null);
             }
             restartButton.SetActive(true);
-            Camera.main.transform.position -= new Vector3(0, 0, 3f);
+            Camera.main.transform.position -= new Vector3(2f, 0, 3f);
             Destroy(collision.gameObject);
             _collisionSet = true;
         }
