@@ -7,4 +7,8 @@ public class CanvasButtons : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+    public void LoadInstagram()
+    {
+        Application.OpenURL("https://www.instagram.com");
+    }
 }
