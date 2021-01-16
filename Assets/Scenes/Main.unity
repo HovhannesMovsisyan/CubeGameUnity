@@ -888,6 +888,11 @@ MonoBehaviour:
   cubeToPlace: {fileID: 1075692606}
   cubeToCreate: {fileID: 56008319159138324, guid: 103f2d3f7a11e0a439983b99f69dc8d2, type: 3}
   allCubes: {fileID: 1240335603}
+  canvasStartPage:
+  - {fileID: 759455214}
+  - {fileID: 1718293757}
+  - {fileID: 1018400261}
+  - {fileID: 675863445}
 --- !u!4 &1006686504
 Transform:
   m_ObjectHideFlags: 0
@@ -1311,7 +1316,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 43.800003, y: -42.5}
+  m_AnchoredPosition: {x: 43.80005, y: -42.5}
   m_SizeDelta: {x: 87.6, y: 54}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1367261549

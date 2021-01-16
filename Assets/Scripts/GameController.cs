@@ -2,6 +2,7 @@ using UnityEngine;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.EventSystems;
 
 public class GameController : MonoBehaviour
 {
@@ -9,9 +10,10 @@ public class GameController : MonoBehaviour
     public float cubeChangePlaceSpeed = 0.5f;
     public Transform cubeToPlace;
     public GameObject cubeToCreate, allCubes;
+    public GameObject[] canvasStartPage;
     private Rigidbody allCubesRb;
 
-    private bool IsLose;
+    private bool IsLose, firstCube;
 
     private readonly List<Vector3> allCubsPositions = new List<Vector3> 
     { 
@@ -37,12 +39,20 @@ public class GameController : MonoBehaviour
 
     private void Update()
     {
-        if((Input.GetMouseButtonDown(0) || Input.touchCount > 0) && cubeToPlace!=null)
+        if((Input.GetMouseButtonDown(0) || Input.touchCount > 0) && cubeToPlace!=null && !EventSystem.current.IsPointerOverGameObject())
         {
 #if !UNITY_EDITOR
             if (Input.GetTouch(0).phase != TouchPhase.Began)
                 return;
 #endif
+            if (!firstCube)
+            {
+                firstCube = true;
+                foreach (GameObject item in canvasStartPage)
+                {
+                    Destroy(item);
+                }
+            }
             GameObject newCube= Instantiate(cubeToCreate, cubeToPlace.position, Quaternion.identity) as GameObject;
            
             newCube.transform.SetParent(allCubes.transform);
