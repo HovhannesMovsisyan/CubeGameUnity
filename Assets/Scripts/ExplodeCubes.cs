@@ -13,7 +13,7 @@ public class ExplodeCubes : MonoBehaviour
             {
                 Transform child = collision.transform.GetChild(i);
                 child.gameObject.AddComponent<Rigidbody>();
-                child.gameObject.GetComponent<Rigidbody>().AddExplosionForce(150f, Vector3.up, 5f);
+                child.gameObject.GetComponent<Rigidbody>().AddExplosionForce(80f, Vector3.up, 5f);
                 child.SetParent(null);
             }
             restartButton.SetActive(true);
