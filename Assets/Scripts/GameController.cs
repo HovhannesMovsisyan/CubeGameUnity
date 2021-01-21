@@ -9,7 +9,7 @@ public class GameController : MonoBehaviour
     private CubePos nowCube = new CubePos(0,1,0);
     public float cubeChangePlaceSpeed = 0.5f;
     public Transform cubeToPlace;
-    public GameObject cubeToCreate, allCubes;
+    public GameObject cubeToCreate, allCubes, vfx;
     public GameObject[] canvasStartPage;
     private Rigidbody allCubesRb;
     private float camMoveToYPosition, camMoveSpeed=2f;
@@ -66,6 +66,9 @@ public class GameController : MonoBehaviour
             newCube.transform.SetParent(allCubes.transform);
             nowCube.SetVector(cubeToPlace.position);
             allCubsPositions.Add(nowCube.GetVector());
+
+            GameObject newVfx= Instantiate(vfx, newCube.transform.position, Quaternion.identity) as GameObject;
+            Destroy(newVfx, 1.5f);
 
             allCubesRb.isKinematic = true;
             allCubesRb.isKinematic = false;

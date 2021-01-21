@@ -569,6 +569,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 516b0160f08a21c46aec483c77461b66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  musicOn: {fileID: 0}
+  musicOff: {fileID: 0}
 --- !u!114 &759455217
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -888,6 +890,7 @@ MonoBehaviour:
   cubeToPlace: {fileID: 1075692606}
   cubeToCreate: {fileID: 56008319159138324, guid: 103f2d3f7a11e0a439983b99f69dc8d2, type: 3}
   allCubes: {fileID: 1240335603}
+  vfx: {fileID: 120410, guid: 6636b3078b0905e489f698a11b7a6b6b, type: 3}
   canvasStartPage:
   - {fileID: 759455214}
   - {fileID: 1718293757}
@@ -1142,6 +1145,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 516b0160f08a21c46aec483c77461b66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  musicOn: {fileID: 0}
+  musicOff: {fileID: 0}
 --- !u!114 &1114353330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1335,6 +1340,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 516b0160f08a21c46aec483c77461b66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  musicOn: {fileID: 0}
+  musicOff: {fileID: 0}
 --- !u!114 &1367261550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1378,7 +1385,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1367261551}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1367261549}
+        m_TargetAssemblyTypeName: CanvasButtons, Assembly-CSharp
+        m_MethodName: Music
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1367261551
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1468,6 +1487,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 516b0160f08a21c46aec483c77461b66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  musicOn: {fileID: 0}
+  musicOff: {fileID: 0}
 --- !u!114 &1718293760
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1594,6 +1615,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   restartButton: {fileID: 1114353327}
+  explosion: {fileID: 110790, guid: 0f75f6db4a318f54382e0c98b2226db8, type: 3}
 --- !u!4 &1753918990
 Transform:
   m_ObjectHideFlags: 0
