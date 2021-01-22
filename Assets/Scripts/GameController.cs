@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -12,11 +13,13 @@ public class GameController : MonoBehaviour
     public GameObject cubeToCreate, allCubes, vfx;
     public GameObject[] canvasStartPage;
     private Rigidbody allCubesRb;
-    private float camMoveToYPosition, camMoveSpeed=2f;
+    private float camMoveToYPosition;
+    private readonly float camMoveSpeed = 2f;
     private bool IsLose, firstCube;
     private Transform mainCam;
     public Color[] bgColors;
     private Color toCameraColor;
+    public Text scoreText;
 
     private readonly List<Vector3> allCubsPositions = new List<Vector3> 
     { 
@@ -37,6 +40,8 @@ public class GameController : MonoBehaviour
 
     private void Start()
     {
+        scoreText.text = "<size=40><color=#0C6721>Best:</color></size> <color=black>" + PlayerPrefs.GetInt("score") + "</color>\n<color=black><size=33>now:</size> 0</color>";
+
         toCameraColor = Camera.main.backgroundColor;
         mainCam = Camera.main.transform;
         camMoveToYPosition = 5.9f + nowCube.y - 1f;
@@ -148,6 +153,13 @@ public class GameController : MonoBehaviour
             if (Mathf.Abs(Convert.ToInt32(item.z)) > maxZ)
                 maxZ = Convert.ToInt32(item.z);
         }
+        maxY--;
+
+        if (PlayerPrefs.GetInt("score") < maxY)
+            PlayerPrefs.SetInt("score", maxY);
+
+        scoreText.text = "<size=40><color=#0C6721>Best:</color></size> <color=black>" + PlayerPrefs.GetInt("score") + "</color>\n<color=black><size=33>now:</size> "+maxY+"</color>";
+
         camMoveToYPosition = 5.9f + nowCube.y - 1f;
         maxHor = maxX > maxZ ? maxX : maxZ;
         if (maxHor % 3 == 0 && prevCountMaxHorizontal!=maxHor)
