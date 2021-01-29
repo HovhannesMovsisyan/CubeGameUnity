@@ -453,7 +453,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 0.9433962, g: 0.86153334, b: 0.07564971, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -702,7 +702,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.5573603, g: 0.67163295, b: 0.7075472, a: 0}
+  m_BackGroundColor: {r: 0.46364364, g: 0.57267743, b: 0.6509434, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -803,8 +803,8 @@ MonoBehaviour:
       colorBlindnessType: 0
       colorBlindnessStrength: 1
   m_Resources: {fileID: 11400000, guid: d82512f9c8e5d4a4d938b575d47f88d4, type: 2}
-  m_ShowToolkit: 0
-  m_ShowCustomSorter: 0
+  m_ShowToolkit: 1
+  m_ShowCustomSorter: 1
   breakBeforeColorGrading: 0
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
@@ -888,9 +888,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cubeChangePlaceSpeed: 0.5
   cubeToPlace: {fileID: 1075692606}
-  cubeToCreate: {fileID: 56008319159138324, guid: 103f2d3f7a11e0a439983b99f69dc8d2, type: 3}
   allCubes: {fileID: 1240335603}
   vfx: {fileID: 120410, guid: 6636b3078b0905e489f698a11b7a6b6b, type: 3}
+  cubesToCreate:
+  - {fileID: 56008319159138324, guid: 103f2d3f7a11e0a439983b99f69dc8d2, type: 3}
+  - {fileID: 3732141769459615804, guid: aec202189661ace4fafc60ec28782d17, type: 3}
+  - {fileID: 728406504848596477, guid: 8cd7880abaace8e47be91ae3200d0548, type: 3}
+  - {fileID: 4554159937378135492, guid: 1e74ed542e6af6343a51fcd663600210, type: 3}
+  - {fileID: 5107804707184435176, guid: b54da4c390edd2d4c857019b4d234d7f, type: 3}
+  - {fileID: 6989952096706427520, guid: c131b5ed9d176e5429350c30bc0b7e9e, type: 3}
+  - {fileID: 2733169489446490757, guid: da66a50234c90c04e8361892978b8c0a, type: 3}
+  - {fileID: 5453438993078712868, guid: c7bd26bde7558d348b0ecaa0abc38fbf, type: 3}
+  - {fileID: 1825853547237874830, guid: ede2afc0ce95e7e45996ca3cb9671c9f, type: 3}
+  - {fileID: 4678879565826015175, guid: 3b87bfefb1ac6954ab8effe8765c13a7, type: 3}
   canvasStartPage:
   - {fileID: 759455214}
   - {fileID: 1718293757}
